@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>For My Baby</title>
+</head>
+<body class="center dark">
+<h1>Enter My Heart ❤️</h1>
+<input type="password" id="pass" placeholder="password">
+<button onclick="check()">enter</button>
+<p id="error"></p>
+
+<script>
+function check(){
+  if(document.getElementById("pass").value === "bubu"){
+    window.location.href = "home.html";
+  } else {
+    document.getElementById("error").innerText = "only my baby knows this ❤️";
+  }
+}
+</script>
+</body>
+</html>

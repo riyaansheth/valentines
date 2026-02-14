@@ -1,0 +1,41 @@
+body.dark{
+background: radial-gradient(circle,#1a001a,#000);
+color:white;
+font-family:Poppins,sans-serif;
+padding:40px;
+}
+
+.center{
+text-align:center;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:pink;
+cursor:pointer;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.card{
+background:#330033;
+padding:20px;
+border-radius:20px;
+text-align:center;
+}
+
+.heart{
+font-size:40px;
+cursor:pointer;
+margin-top:40px;
+}
+
+.promises li{
+margin:15px 0;
+}
