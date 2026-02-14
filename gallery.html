@@ -5,22 +5,43 @@
 <title>Memories</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg">
+<body>
+
+<div class="floating-layer"></div>
 
 <audio id="music" loop></audio>
 
-<h1 class="title">Why I Love You ❤️</h1>
+<div class="center-page">
+  <div class="container">
+    <h1>Why I Love You ❤️</h1>
 
-<div class="cards">
-<div class="flip"><div class="front">your smile</div><div class="back">it melts me every time</div></div>
-<div class="flip"><div class="front">your voice</div><div class="back">my favorite sound</div></div>
-<div class="flip"><div class="front">your care</div><div class="back">you love so deeply</div></div>
-<div class="flip"><div class="front">us</div><div class="back">my safest place</div></div>
+    <div class="cards">
+      <div class="flip">
+        <div class="front">your smile</div>
+        <div class="back">it melts me every time</div>
+      </div>
+      <div class="flip">
+        <div class="front">your voice</div>
+        <div class="back">my favorite sound</div>
+      </div>
+      <div class="flip">
+        <div class="front">your care</div>
+        <div class="back">you love so deeply</div>
+      </div>
+      <div class="flip">
+        <div class="front">us</div>
+        <div class="back">my safest place</div>
+      </div>
+    </div>
+
+    <br>
+    <button onclick="note()">tap for a secret ❤️</button>
+
+    <nav>
+      <a href="home.html">back</a>
+    </nav>
+  </div>
 </div>
-
-<div class="floating-heart" onclick="note()">❤️</div>
-
-<a class="back" href="home.html">back</a>
 
 <script src="script.js"></script>
 </body>

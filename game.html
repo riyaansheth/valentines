@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
 <title>Only You</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="dark center">
+<body>
 
-<h1>Click the Hearts ❤️</h1>
-<button onclick="finalHeart()">❤️</button>
+<div class="floating-layer"></div>
 
-<p id="final"></p>
+<audio id="music" loop></audio>
 
-<a href="home.html">back</a>
+<div class="center-page">
+  <div class="container">
+    <h1>Catch the Hearts ❤️</h1>
+    <p>tap any heart</p>
 
-<script>
-function finalHeart(){
- document.getElementById("final").innerText =
- "no matter how many hearts you click it will always be YOU ❤️";
-}
-</script>
+    <div id="heart-zone" style="position:relative;height:200px;"></div>
 
+    <p id="final"></p>
+
+    <nav>
+      <a href="home.html">back</a>
+    </nav>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

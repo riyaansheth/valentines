@@ -2,28 +2,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>For Bubu</title>
+<title>For My Baby</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg center">
+<body>
 
-<div class="glass">
-<h1>Enter My Heart ❤️</h1>
-<input type="password" id="pass" placeholder="only for you">
-<button onclick="check()">unlock</button>
-<p id="error"></p>
+<div class="floating-layer"></div>
+
+<div class="center-page">
+  <div class="container">
+    <h1>Enter My Heart ❤️</h1>
+    <p>only for you</p>
+    <input type="password" id="pass" placeholder="password">
+    <br><br>
+    <button onclick="check()">unlock</button>
+    <p id="error"></p>
+  </div>
 </div>
 
 <script>
 function check(){
-if(document.getElementById("pass").value === "bubu"){
-localStorage.setItem("music","on");
-window.location.href="home.html";
-}else{
-document.getElementById("error").innerText="only my baby knows this ❤️";
-}
+  if(document.getElementById("pass").value === "bubu"){
+    localStorage.setItem("music","on")
+    window.location.href="home.html"
+  }else{
+    document.getElementById("error").innerText="only my baby knows this ❤️"
+  }
 }
 </script>
 
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,58 +1,91 @@
-const audio=document.getElementById("music")
-if(audio){
-audio.src="assets/music/line_without_a_hook.mp3"
-if(localStorage.getItem("music")==="on"){
-audio.play()
-}
+const audio = document.getElementById("music")
+
+if (audio) {
+  audio.src = "assets/music/line_without_a_hook.mp3"
+  audio.volume = 0.6
+
+  const savedTime = localStorage.getItem("musicTime")
+  const isPlaying = localStorage.getItem("musicState")
+
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime)
+  }
+
+  if (isPlaying === "playing") {
+    audio.play()
+  }
+
+  audio.addEventListener("timeupdate", () => {
+    localStorage.setItem("musicTime", audio.currentTime)
+  })
+
+  audio.addEventListener("play", () => {
+    localStorage.setItem("musicState", "playing")
+  })
+
+  audio.addEventListener("pause", () => {
+    localStorage.setItem("musicState", "paused")
+  })
 }
 
-function toggleMusic(){
-if(audio.paused){
-audio.play()
-localStorage.setItem("music","on")
-}else{
-audio.pause()
-localStorage.setItem("music","off")
-}
+function toggleMusic() {
+  if (!audio) return
+
+  if (audio.paused) {
+    audio.play()
+  } else {
+    audio.pause()
+  }
 }
 
-const counter=document.getElementById("counter")
-if(counter){
-const start=new Date("2023-11-26")
-const now=new Date()
-const days=Math.floor((now-start)/(1000*60*60*24))
-counter.innerText="Days since I fell in love with you "+days
+/* LOVE COUNTER */
+const counter = document.getElementById("counter")
+if (counter) {
+  const loveDate = new Date("2023-11-26T00:00:00")
+  const now = new Date()
+  const days = Math.floor((now - loveDate) / (1000 * 60 * 60 * 24))
+  counter.innerText = "Days since I fell in love with you " + days
 }
 
-function spawnHearts(){
-const layer=document.querySelector(".floating-layer")
-for(let i=0;i<30;i++){
-const h=document.createElement("div")
-h.className="floating-heart"
-h.innerText="❤️"
-h.style.left=Math.random()*100+"%"
-h.style.animationDuration=8+Math.random()*6+"s"
-h.style.animationDelay=Math.random()*5+"s"
-layer.appendChild(h)
-}
+/* FLOATING HEARTS BACKGROUND */
+function spawnHearts() {
+  const layer = document.querySelector(".floating-layer")
+  if (!layer) return
+
+  for (let i = 0; i < 35; i++) {
+    const heart = document.createElement("div")
+    heart.className = "floating-heart"
+    heart.innerText = "❤️"
+    heart.style.left = Math.random() * 100 + "%"
+    heart.style.animationDuration = 10 + Math.random() * 8 + "s"
+    heart.style.animationDelay = Math.random() * 5 + "s"
+    heart.style.fontSize = 14 + Math.random() * 20 + "px"
+    layer.appendChild(heart)
+  }
 }
 
 spawnHearts()
 
-function note(){
-alert("you are my home ❤️")
+/* SECRET NOTE */
+function note() {
+  alert("you are my home ❤️")
 }
 
-const zone=document.getElementById("heart-zone")
-if(zone){
-for(let i=0;i<14;i++){
-const h=document.createElement("div")
-h.innerText="❤️"
-h.style.fontSize="28px"
-h.style.position="absolute"
-h.style.left=Math.random()*85+"%"
-h.style.top=Math.random()*75+"%"
-h.onclick=()=>document.getElementById("final").innerText="no matter what it will always be YOU ❤️"
-zone.appendChild(h)
-}
+/* HEART GAME */
+const zone = document.getElementById("heart-zone")
+if (zone) {
+  for (let i = 0; i < 15; i++) {
+    const h = document.createElement("div")
+    h.innerText = "❤️"
+    h.style.position = "absolute"
+    h.style.left = Math.random() * 85 + "%"
+    h.style.top = Math.random() * 70 + "%"
+    h.style.fontSize = "26px"
+    h.style.cursor = "pointer"
+    h.onclick = () => {
+      document.getElementById("final").innerText =
+        "no matter where we go it will always be YOU ❤️"
+    }
+    zone.appendChild(h)
+  }
 }
