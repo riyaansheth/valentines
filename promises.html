@@ -7,26 +7,36 @@
 </head>
 <body>
 
+<div class="photo-layer"></div>
 <div class="floating-layer"></div>
-
 <audio id="music" loop></audio>
 
 <div class="center-page">
-  <div class="container">
-    <h1>Things I Promise You</h1>
+<div class="container">
+<h1>Things I Promise You</h1>
 
-    <div class="promise-box">
-      <p>to protect your heart</p>
-      <p>to listen without judgement</p>
-      <p>to grow with you</p>
-      <p>to choose you every single day</p>
-    </div>
-
-    <nav>
-      <a href="home.html">back</a>
-    </nav>
-  </div>
+<div class="promise-wrap">
+<div class="promises">
+<p onmouseenter="showPreview('assets/images/photo6.jpeg')" onmouseleave="hidePreview()">to protect your heart</p>
+<p onmouseenter="showPreview('assets/images/photo7.jpeg')" onmouseleave="hidePreview()">to listen always</p>
+<p onmouseenter="showPreview('assets/images/photo8.JPG')" onmouseleave="hidePreview()">to choose you daily</p>
 </div>
+
+<div id="preview" class="promise-preview">
+<img src="">
+</div>
+</div>
+
+<nav><a href="home.html">back</a></nav>
+</div>
+</div>
+
+<script>
+spawnPhotos([
+"assets/images/photo11.jpeg",
+"assets/images/photo10.JPG"
+])
+</script>
 
 <script src="script.js"></script>
 </body>

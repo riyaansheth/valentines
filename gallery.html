@@ -7,41 +7,31 @@
 </head>
 <body>
 
+<div class="photo-layer"></div>
 <div class="floating-layer"></div>
-
 <audio id="music" loop></audio>
 
 <div class="center-page">
-  <div class="container">
-    <h1>Why I Love You ❤️</h1>
+<div class="container">
+<h1>Why I Love You ❤️</h1>
 
-    <div class="cards">
-      <div class="flip">
-        <div class="front">your smile</div>
-        <div class="back">it melts me every time</div>
-      </div>
-      <div class="flip">
-        <div class="front">your voice</div>
-        <div class="back">my favorite sound</div>
-      </div>
-      <div class="flip">
-        <div class="front">your care</div>
-        <div class="back">you love so deeply</div>
-      </div>
-      <div class="flip">
-        <div class="front">us</div>
-        <div class="back">my safest place</div>
-      </div>
-    </div>
-
-    <br>
-    <button onclick="note()">tap for a secret ❤️</button>
-
-    <nav>
-      <a href="home.html">back</a>
-    </nav>
-  </div>
+<div class="cards">
+<div class="flip"><div class="front">your smile</div><div class="back"><img src="assets/images/memory1.jpg"></div></div>
+<div class="flip"><div class="front">your laugh</div><div class="back"><img src="assets/images/memory2.jpg"></div></div>
+<div class="flip"><div class="front">your care</div><div class="back"><img src="assets/images/memory3.jpg"></div></div>
+<div class="flip"><div class="front">us</div><div class="back"><img src="assets/images/memory4.jpg"></div></div>
 </div>
+
+<nav><a href="home.html">back</a></nav>
+</div>
+</div>
+
+<script>
+spawnPhotos([
+"assets/images/photo3.JPG",
+"assets/images/photo4.jpeg"
+])
+</script>
 
 <script src="script.js"></script>
 </body>
