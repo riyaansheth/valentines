@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
 <title>Memories</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="dark">
+<body class="bg">
 
-<h1>Why I Love You ❤️</h1>
+<audio id="music" loop></audio>
+
+<h1 class="title">Why I Love You ❤️</h1>
 
 <div class="cards">
-<div class="card">your smile</div>
-<div class="card">your voice</div>
-<div class="card">the way you care</div>
-<div class="card">how safe I feel</div>
+<div class="flip"><div class="front">your smile</div><div class="back">it melts me every time</div></div>
+<div class="flip"><div class="front">your voice</div><div class="back">my favorite sound</div></div>
+<div class="flip"><div class="front">your care</div><div class="back">you love so deeply</div></div>
+<div class="flip"><div class="front">us</div><div class="back">my safest place</div></div>
 </div>
 
-<div class="heart" onclick="note()">❤️</div>
+<div class="floating-heart" onclick="note()">❤️</div>
 
-<a href="home.html">back</a>
+<a class="back" href="home.html">back</a>
 
 <script src="script.js"></script>
 </body>

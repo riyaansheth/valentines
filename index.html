@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<title>For Bubu</title>
 <link rel="stylesheet" href="style.css">
-<title>For My Baby</title>
 </head>
-<body class="center dark">
+<body class="bg center">
+
+<div class="glass">
 <h1>Enter My Heart ❤️</h1>
-<input type="password" id="pass" placeholder="password">
-<button onclick="check()">enter</button>
+<input type="password" id="pass" placeholder="only for you">
+<button onclick="check()">unlock</button>
 <p id="error"></p>
+</div>
 
 <script>
 function check(){
-  if(document.getElementById("pass").value === "bubu"){
-    window.location.href = "home.html";
-  } else {
-    document.getElementById("error").innerText = "only my baby knows this ❤️";
-  }
+if(document.getElementById("pass").value === "bubu"){
+localStorage.setItem("music","on");
+window.location.href="home.html";
+}else{
+document.getElementById("error").innerText="only my baby knows this ❤️";
+}
 }
 </script>
+
 </body>
 </html>
